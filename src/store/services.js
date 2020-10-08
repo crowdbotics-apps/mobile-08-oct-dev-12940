@@ -1,4 +1,17 @@
 import axios from "axios"
+import {
+  NEW_CONNECTOR_QWERTY_USERNAME,
+  NEW_CONNECTOR_QWERTY_PASSWORD
+} from "react-native-dotenv"
+const newConnectorqwerty = axios.create({
+  baseURL:
+    "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/12940/storyboard/11918/",
+  auth: {
+    username: NEW_CONNECTOR_QWERTY_USERNAME,
+    password: NEW_CONNECTOR_QWERTY_PASSWORD
+  },
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const plugin = axios.create({
   baseURL:
     "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/7307/storyboard/8491/",
